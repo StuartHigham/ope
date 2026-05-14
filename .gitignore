@@ -5,7 +5,7 @@ node_modules/
 .next/
 out/
 
-# Environment variables — never commit these
+# Environment variables never commit
 .env
 .env.local
 .env.production
