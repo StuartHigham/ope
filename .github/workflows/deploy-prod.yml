@@ -10,6 +10,11 @@ jobs:
     runs-on: ubuntu-latest
     environment: production
     steps:
+      - name: Connect to Tailscale
+        uses: tailscale/github-action@v3
+        with:
+          authkey: ${{ secrets.TAILSCALE_AUTHKEY }}
+          
       - name: Deploy to production
         uses: appleboy/ssh-action@v1.0.3
         with:
